@@ -35,11 +35,11 @@ jobs:
     secrets:
       token: ${{ secrets.NSM_BOT_GITHUB_TOKEN }}
 
-  update-dependent-repositories:
+  release-dependent-repositories:
     name: Create release
     needs: [get-tag, create-release]
     if: ${{ github.event.workflow_run.conclusion == 'success' && contains(github.event.workflow_run.head_branch, 'release/') }}
-    uses: NikitaSkrynnik/.github/.github/workflows/release.yaml@main
+    uses: NikitaSkrynnik/.github/.github/workflows/release-depentent-repositories.yaml@main
     with:
       tag: ${{ needs.get-tag.outputs.tag }}
       dependent_repositories: |
