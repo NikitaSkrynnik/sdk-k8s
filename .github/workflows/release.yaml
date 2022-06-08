@@ -38,7 +38,6 @@ jobs:
   release-dependent-repositories:
     name: Create release
     needs: [get-tag, create-release]
-    if: ${{ github.event.workflow_run.conclusion == 'success' && contains(github.event.workflow_run.head_branch, 'release/') }}
     uses: NikitaSkrynnik/.github/.github/workflows/release-depentent-repositories.yaml@main
     with:
       tag: ${{ needs.get-tag.outputs.tag }}
