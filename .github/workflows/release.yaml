@@ -33,7 +33,7 @@ jobs:
     with:
       tag: ${{ needs.get-tag.outputs.tag }}
     secrets:
-      token: ${{ secrets.NSM_BOT_GITHUB_TOKEN }}
+      token: ${{ secrets.GITHUB_TOKEN }}
 
   release-dependent-repositories:
     name: Create release
