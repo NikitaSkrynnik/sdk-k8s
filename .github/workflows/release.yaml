@@ -38,7 +38,7 @@ jobs:
   release-dependent-repositories:
     name: Create release
     needs: [get-tag, create-release]
-    uses: NikitaSkrynnik/.github/.github/workflows/release-depentent-repositories.yaml@main
+    uses: NikitaSkrynnik/.github/.github/workflows/release-dependent-repositories.yaml@main
     with:
       tag: ${{ needs.get-tag.outputs.tag }}
       dependent_repositories: |
