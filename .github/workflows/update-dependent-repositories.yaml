@@ -4,15 +4,10 @@ on:
   push:
     branches:
       - main
-  workflow_run:
-    types:
-      - completed
-    workflows:
-      - 'automerge'
 jobs:
-  release:
+  update:
     if: ${{ github.event.workflow_run.conclusion == 'success' && github.actor == 'nsmbot' || github.event_name == 'push' }}
-    uses: networkservicemesh/.github/.github/workflows/update-dependent-repositories-gomod.yaml@main
+    uses: NikitaSkrynnik/.github/.github/workflows/update-dependent-repositories-gomod.yaml@main
     with:
       dependent_repositories: |
         ["cmd-exclude-prefixes-k8s",
