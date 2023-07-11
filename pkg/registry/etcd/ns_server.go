@@ -24,19 +24,19 @@ import (
 	"sync"
 	"time"
 
+	"github.com/NikitaSkrynnik/sdk/pkg/tools/log"
 	"github.com/golang/protobuf/ptypes/empty"
-	"github.com/networkservicemesh/sdk/pkg/tools/log"
 	"github.com/pkg/errors"
 	apierrors "k8s.io/apimachinery/pkg/api/errors"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/watch"
 
-	"github.com/networkservicemesh/api/pkg/api/registry"
-	"github.com/networkservicemesh/sdk/pkg/registry/core/next"
-	"github.com/networkservicemesh/sdk/pkg/tools/matchutils"
+	"github.com/NikitaSkrynnik/api/pkg/api/registry"
+	"github.com/NikitaSkrynnik/sdk/pkg/registry/core/next"
+	"github.com/NikitaSkrynnik/sdk/pkg/tools/matchutils"
 
-	v1 "github.com/networkservicemesh/sdk-k8s/pkg/tools/k8s/apis/networkservicemesh.io/v1"
-	"github.com/networkservicemesh/sdk-k8s/pkg/tools/k8s/client/clientset/versioned"
+	v1 "github.com/NikitaSkrynnik/sdk-k8s/pkg/tools/k8s/apis/networkservicemesh.io/v1"
+	"github.com/NikitaSkrynnik/sdk-k8s/pkg/tools/k8s/client/clientset/versioned"
 )
 
 type etcdNSRegistryServer struct {

@@ -22,7 +22,7 @@
 package v1
 
 import (
-	"github.com/networkservicemesh/api/pkg/api/registry"
+	"github.com/NikitaSkrynnik/api/pkg/api/registry"
 	"google.golang.org/protobuf/proto"
 	metaV1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 )

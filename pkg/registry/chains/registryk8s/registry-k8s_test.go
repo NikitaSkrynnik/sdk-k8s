@@ -29,17 +29,17 @@ import (
 	"go.uber.org/goleak"
 	"google.golang.org/grpc"
 
-	"github.com/networkservicemesh/api/pkg/api/networkservice"
-	"github.com/networkservicemesh/api/pkg/api/networkservice/mechanisms/cls"
-	kernelmech "github.com/networkservicemesh/api/pkg/api/networkservice/mechanisms/kernel"
-	"github.com/networkservicemesh/api/pkg/api/registry"
-	registryserver "github.com/networkservicemesh/sdk/pkg/registry"
-	"github.com/networkservicemesh/sdk/pkg/registry/core/adapters"
-	"github.com/networkservicemesh/sdk/pkg/tools/sandbox"
-	"github.com/networkservicemesh/sdk/pkg/tools/token"
+	"github.com/NikitaSkrynnik/api/pkg/api/networkservice"
+	"github.com/NikitaSkrynnik/api/pkg/api/networkservice/mechanisms/cls"
+	kernelmech "github.com/NikitaSkrynnik/api/pkg/api/networkservice/mechanisms/kernel"
+	"github.com/NikitaSkrynnik/api/pkg/api/registry"
+	registryserver "github.com/NikitaSkrynnik/sdk/pkg/registry"
+	"github.com/NikitaSkrynnik/sdk/pkg/registry/core/adapters"
+	"github.com/NikitaSkrynnik/sdk/pkg/tools/sandbox"
+	"github.com/NikitaSkrynnik/sdk/pkg/tools/token"
 
-	"github.com/networkservicemesh/sdk-k8s/pkg/registry/chains/registryk8s"
-	"github.com/networkservicemesh/sdk-k8s/pkg/tools/k8s/client/clientset/versioned/fake"
+	"github.com/NikitaSkrynnik/sdk-k8s/pkg/registry/chains/registryk8s"
+	"github.com/NikitaSkrynnik/sdk-k8s/pkg/tools/k8s/client/clientset/versioned/fake"
 )
 
 // This is started as a daemon in k8s.io/klog/v2 init()
