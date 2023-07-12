@@ -3,7 +3,7 @@ module github.com/NikitaSkrynnik/sdk-k8s
 go 1.20
 
 require (
-	github.com/NikitaSkrynnik/sdk v0.5.1-0.20230712083817-6036982076af
+	github.com/NikitaSkrynnik/sdk v0.5.1-0.20230712092416-4e9b29dc16b1
 	github.com/fsnotify/fsnotify v1.5.4
 	github.com/golang/protobuf v1.5.3
 	github.com/google/uuid v1.3.0
